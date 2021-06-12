@@ -52,9 +52,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-let tot1 = a + b + c;
-let tot2 = a * b * c;
-return [ tot1,tot2, `${a} and ${b} and ${c} sum to ${tot1}.`,`The product of ${a} and ${b} and ${c} is ${tot2}.`]
+let totalSum = sum(a,b)[0];
+totalSum = sum (totalSum ,c)[0];
+let totalMulti = multiply (a,b)[0];
+totalMulti = multiply (totalMulti,c)[0];
+return [ totalSum, totalMulti,`${a} and ${b} and ${c} sum to ${totalSum}.`,`The product of ${a} and ${b} and ${c} is ${totalMulti}.`]
 
 
 
@@ -79,7 +81,7 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+ 
 }
 
 // Here is the test for sumArray(); uncomment it to run it
